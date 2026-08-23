@@ -1,11 +1,7 @@
 const defaultSkins = [
     {
         name: "Default 01",
-        image: "images/sora/default/01.png"
-    },
-    {
-        name: "Default 02",
-        image: "images/sora/default/02.png"
+        image: "images/sora/default/D01.png"
     }
 ];
 
@@ -94,18 +90,10 @@ function mostrarPreview(imagen, nombre) {
 const defaultContainer =
     document.getElementById("defaultSkins");
 
-
 const customContainer =
     document.getElementById("customSkins");
 
 
-mostrarSkins(
-    defaultSkins,
-    defaultContainer
-);
+mostrarSkins(defaultSkins, defaultContainer);
 
-
-mostrarSkins(
-    customSkins,
-    customContainer
-);
+mostrarSkins(customSkins, customContainer);
