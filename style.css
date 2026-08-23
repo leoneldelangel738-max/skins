@@ -1,16 +1,210 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: #f2f2f2;
+    background: #eeeeee;
+    color: #222;
     text-align: center;
 }
 
-header {
-    background: #222;
+
+/* ENCABEZADO */
+
+.hero {
+    height: 250px;
+
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.55),
+            rgba(0, 0, 0, 0.55)
+        ),
+        #7b0d24;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
     color: white;
-    padding: 30px;
+
+    border-bottom: 5px solid #222;
 }
 
+.hero h1 {
+    font-size: 42px;
+    margin: 0;
+
+    letter-spacing: 4px;
+}
+
+
+/* CONTENIDO */
+
 main {
-    padding: 50px;
+    max-width: 1100px;
+
+    margin: auto;
+
+    padding: 30px 20px 60px;
+}
+
+
+h2 {
+    font-size: 22px;
+
+    letter-spacing: 2px;
+
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+
+/* GALERÍA */
+
+.skins-section {
+    margin-bottom: 45px;
+}
+
+.skins-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fill, minmax(85px, 1fr));
+
+    gap: 12px;
+
+    justify-items: center;
+}
+
+
+/* TARJETA DE SKIN */
+
+.skin-card {
+
+    width: 85px;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s,
+        filter 0.2s;
+}
+
+.skin-card:hover {
+
+    transform: scale(1.08);
+
+    filter: brightness(1.15);
+}
+
+
+.skin-name {
+
+    font-size: 10px;
+
+    font-weight: bold;
+
+    margin-bottom: 4px;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+}
+
+
+.skin-card img {
+
+    width: 85px;
+
+    height: 105px;
+
+    object-fit: contain;
+
+    background: #ddd;
+
+    display: block;
+}
+
+
+/* PREVIEW */
+
+.preview-section {
+
+    border-top: 2px solid #ccc;
+
+    padding-top: 30px;
+}
+
+
+.preview-container {
+
+    min-height: 350px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    flex-direction: column;
+}
+
+
+#previewImage {
+
+    max-width: 350px;
+
+    max-height: 450px;
+
+    display: none;
+
+    object-fit: contain;
+}
+
+
+#previewText {
+
+    color: #777;
+
+    font-size: 18px;
+}
+
+
+/* CELULAR */
+
+@media (max-width: 600px) {
+
+    .hero {
+        height: 180px;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .skins-grid {
+
+        grid-template-columns:
+            repeat(auto-fill, minmax(65px, 1fr));
+
+        gap: 8px;
+    }
+
+    .skin-card {
+        width: 65px;
+    }
+
+    .skin-card img {
+
+        width: 65px;
+
+        height: 85px;
+    }
+
 }
